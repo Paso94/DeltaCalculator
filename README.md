@@ -1,2 +1,2 @@
 ﻿# Delta Geometry Calculator
-This program is in Alpha release for testing GitHub
+This program is a beta release for calculate the geometry for delta 3D printers.
