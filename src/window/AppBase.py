@@ -38,15 +38,20 @@ class AppBase:
         input_frame.grid(**src.R.dimensions.input_grid)
         # Grid
         # Volume
-        Label(input_frame, text=src.R.strings.pv_title, bg=src.R.colors.bg).grid(row=0, **src.R.dimensions.input_title_grid)
-        self.pgr_var = self.input_row(input_frame, 1, src.R.strings.pgr_name, src.R.strings.pgr_symbol, delta.printer.pgr)
-        self.pgh_var = self.input_row(input_frame, 2, src.R.strings.pgh_name, src.R.strings.pgh_symbol, delta.printer.pgh)
+        Label(input_frame, text=src.R.strings.pv_title, bg=src.R.colors.bg).grid(row=0,
+                                                                                 **src.R.dimensions.input_title_grid)
+        self.pgr_var = self.input_row(input_frame, 1, src.R.strings.pgr_name, src.R.strings.pgr_symbol,
+                                      delta.printer.pgr)
+        self.pgh_var = self.input_row(input_frame, 2, src.R.strings.pgh_name, src.R.strings.pgh_symbol,
+                                      delta.printer.pgh)
         # Horizontal Offsets
-        Label(input_frame, text=src.R.strings.ho_title, bg=src.R.colors.bg).grid(row=3, **src.R.dimensions.input_title_grid)
+        Label(input_frame, text=src.R.strings.ho_title, bg=src.R.colors.bg).grid(row=3,
+                                                                                 **src.R.dimensions.input_title_grid)
         self.eo_var = self.input_row(input_frame, 4, src.R.strings.eo_name, src.R.strings.eo_symbol, delta.printer.eo)
         self.co_var = self.input_row(input_frame, 5, src.R.strings.co_name, src.R.strings.co_symbol, delta.printer.co)
         # Vertical Offsets
-        Label(input_frame, text=src.R.strings.vo_title, bg=src.R.colors.bg).grid(row=6, **src.R.dimensions.input_title_grid)
+        Label(input_frame, text=src.R.strings.vo_title, bg=src.R.colors.bg).grid(row=6,
+                                                                                 **src.R.dimensions.input_title_grid)
         self.so_var = self.input_row(input_frame, 7, src.R.strings.so_name, src.R.strings.so_symbol, delta.printer.so)
         self.no_var = self.input_row(input_frame, 8, src.R.strings.no_name, src.R.strings.no_symbol, delta.printer.no)
         self.bo_var = self.input_row(input_frame, 9, src.R.strings.bo_name, src.R.strings.bo_symbol, delta.printer.bo)
@@ -55,12 +60,6 @@ class AppBase:
         # Image
         ###########################################################################################
         # Frame
-        '''
-        image_frame = LabelFrame(self.window, text="Image", padx=5, pady=5, bg=R.colors.bg)
-        image_frame.grid(ipadx=5, ipady=5, **R.dimensions.image_grid)
-        photo = PhotoImage(file='delta.gif')
-        Label(image_frame, image=photo).pack(fill="both")
-        '''
         Label(self.window, image=photo, bg=src.R.colors.bg).grid(**src.R.dimensions.image_grid)
         ###########################################################################################
         # Output
@@ -71,22 +70,30 @@ class AppBase:
 
         # Grid Values
         # Geometry
-        Label(output_frame, text=src.R.strings.g_title, bg=src.R.colors.bg).grid(row=0, **src.R.dimensions.input_title_grid)
-        self.drd_var = self.output_row(output_frame, 1, src.R.strings.dr_name, src.R.strings.dr_symbol, delta.printer.drd)
+        Label(output_frame, text=src.R.strings.g_title, bg=src.R.colors.bg).grid(row=0,
+                                                                                 **src.R.dimensions.input_title_grid)
+        self.drd_var = self.output_row(output_frame, 1, src.R.strings.dr_name, src.R.strings.dr_symbol,
+                                       delta.printer.drd)
         self.dr_var, self.dr_entry, self.dr_info = self.output_entry_row(output_frame, 1, delta.printer.dr,
                                                                          str(delta.printer.dr_min) + " < dr")
-        self.srod_var = self.output_row(output_frame, 2, src.R.strings.sro_name, src.R.strings.sro_symbol, delta.printer.srod)
+        self.srod_var = self.output_row(output_frame, 2, src.R.strings.sro_name, src.R.strings.sro_symbol,
+                                        delta.printer.srod)
         self.sro_var, self.sro_entry, self.sro_info = self.output_entry_row(output_frame, 2, delta.printer.sro,
                                                                             str(delta.printer.sro_min) + " < sro < " +
                                                                             str(delta.printer.sro_max))
         # Angles
-        Label(output_frame, text=src.R.strings.a_title, bg=src.R.colors.bg).grid(row=3, **src.R.dimensions.input_title_grid)
-        self.mina_var = self.output_row(output_frame, 4, src.R.strings.mina_name, src.R.strings.mina_symbol, delta.printer.mina)
+        Label(output_frame, text=src.R.strings.a_title, bg=src.R.colors.bg).grid(row=3,
+                                                                                 **src.R.dimensions.input_title_grid)
+        self.mina_var = self.output_row(output_frame, 4, src.R.strings.mina_name, src.R.strings.mina_symbol,
+                                        delta.printer.mina)
         self.ha_var = self.output_row(output_frame, 5, src.R.strings.ha_name, src.R.strings.ha_symbol, delta.printer.ha)
-        self.maxa_var = self.output_row(output_frame, 6, src.R.strings.maxa_name, src.R.strings.maxa_symbol, delta.printer.maxa)
+        self.maxa_var = self.output_row(output_frame, 6, src.R.strings.maxa_name, src.R.strings.maxa_symbol,
+                                        delta.printer.maxa)
         # Heights
-        Label(output_frame, text=src.R.strings.h_title, bg=src.R.colors.bg).grid(row=7, **src.R.dimensions.input_title_grid)
-        self.phd_var = self.output_row(output_frame, 8, src.R.strings.ph_name, src.R.strings.ph_symbol, delta.printer.phd)
+        Label(output_frame, text=src.R.strings.h_title, bg=src.R.colors.bg).grid(row=7,
+                                                                                 **src.R.dimensions.input_title_grid)
+        self.phd_var = self.output_row(output_frame, 8, src.R.strings.ph_name, src.R.strings.ph_symbol,
+                                       delta.printer.phd)
         self.ph_var, self.ph_entry, self.ph_info = self.output_entry_row(output_frame, 8, delta.printer.ph,
                                                                          str(delta.printer.ph_min) + " < ph")
         self.zh_var = self.output_row(output_frame, 9, src.R.strings.zh_name, src.R.strings.zh_symbol, delta.printer.zh)
@@ -151,7 +158,8 @@ class AppBase:
     def output_entry_row(self, frame, row, value, string):
         var = DoubleVar()
         var.set(value)
-        entry = EntryFloat(frame, textvariable=var, width=src.R.dimensions.width_entries, bg=src.R.colors.bg, justify=CENTER)
+        entry = EntryFloat(frame, textvariable=var, width=src.R.dimensions.width_entries, bg=src.R.colors.bg,
+                           justify=CENTER)
         entry.grid(row=row, **src.R.dimensions.output_entries_grid)
         var.trace('w', self.update)
         info = Label(frame, text=string, width=src.R.dimensions.width_entries * 2 + 2, bg=src.R.colors.bg)
@@ -178,9 +186,9 @@ class AppBase:
                 self.sro_var.set(dlt['sro'])
                 self.ph_var.set(dlt['ph'])
             except AttributeError:
-                print("Apertura annullata")
+                print(src.R.strings.cancel_file)
             except:
-                print("File non valido")
+                print(src.R.strings.not_valid_file)
 
         self.window.title(self.filename + " - " + src.R.strings.title)
 
@@ -202,10 +210,10 @@ class AppBase:
             self.window.title(self.filename + " - " + src.R.strings.title)
 
     def saveasdefault_file(self):
-            file = open("delta.default", 'w')
-            file.write(str(delta.printer))
-            file.close()
-            self.window.title(self.filename + " - " + src.R.strings.title)
+        file = open("src/delta.default", 'w')
+        file.write(str(delta.printer))
+        file.close()
+        self.window.title(src.R.strings.title)
 
     def info_dialog(self):
         top = Toplevel(self.window)
@@ -235,5 +243,3 @@ def get(var):
         return var.get()
     except ValueError:
         return 0
-
-# TODO Add scrollbar

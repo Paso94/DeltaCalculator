@@ -1,4 +1,5 @@
 from tkinter import *
+from tkinter.messagebox import askokcancel
 from tkinter.simpledialog import Dialog
 
 
@@ -30,22 +31,7 @@ def set_language(lng):
 
 
 def saveasdefault_dialog(app_base):
-    '''
-    top = Toplevel(app_base)
-    top.geometry("200x100")
-    app_base.wait_window(top)
-    # app_base.saveasdefault_file()
-    '''
-    DefaultDialog(app_base)
+    if askokcancel("Save as default", src.R.strings.default_menu):
+        app_base.saveasdefault_file()
 
 
-class DefaultDialog(Dialog):
-
-    def body(self, master):
-
-        text = src.R.strings.default
-        Label(master, text=text).pack()
-
-
-    def apply(self):
-        print("Save as default")

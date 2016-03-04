@@ -47,7 +47,11 @@ zh_symbol = "[zh]"
 # Menu
 preferences_menu = "Preferences"
 language_menu = "Language"
-default = "You are?"
+default_menu = "Are you sure?"
+
+#File 
+cancel_file = "Opening canceled"
+not_valid_file = "File not valid"
 
 __file__ = open("src/preferences", 'r')
 __preferences__ = eval(__file__.read())
@@ -82,3 +86,7 @@ if __preferences__['language'] == "IT":
     # Menu
     preferences_menu = "Preferenze"
     language_menu = "Lingua"
+    default_menu = "Sei sicuro?"
+    #File
+    cancel_file = "Apertura annullata"
+    not_valid_file = "File non valido"

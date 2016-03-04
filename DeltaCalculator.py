@@ -15,6 +15,6 @@ root['pady'] = 5
 photo = PhotoImage(file='src/delta.gif')
 app_base = AppBase(root, photo)
 # tk_window.resizable(3000, 2000)
-root.geometry("1100x640")
+root.geometry("1140x640")
 root.title(src.R.strings.title)
 root.mainloop()
