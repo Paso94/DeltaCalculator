@@ -83,27 +83,18 @@ def update(a, b, c):
 ###########################################################################################
 menu = Menu(root)
 
+
 #############################################
 # Menu File
 #############################################
-# define options for opening a file
-open_file_opt = {}
-open_file_opt['defaultextension'] = '.dlt'
-open_file_opt['filetypes'] = [('delta printer', '.dlt'), ('all files', '.*')]
-open_file_opt['initialdir'] = './'
-open_file_opt['initialfile'] = ''
-open_file_opt['title'] = 'Open'
-
-# define options for saving a file
-saveas_file_opt = {}
-saveas_file_opt['defaultextension'] = '.dlt'
-saveas_file_opt['filetypes'] = [('delta printer', '.dlt'), ('all files', '.*')]
-saveas_file_opt['initialdir'] = './'
-saveas_file_opt['initialfile'] = ''
-saveas_file_opt['title'] = 'Save as...'
-
-
 def open_file():
+    # define options for opening a file
+    open_file_opt = {}
+    open_file_opt['defaultextension'] = '.dlt'
+    open_file_opt['filetypes'] = [('delta printer', '.dlt'), ('all files', '.*')]
+    open_file_opt['initialdir'] = './'
+    open_file_opt['initialfile'] = ''
+    open_file_opt['title'] = 'Open'
     filename = askopenfilename(**open_file_opt)
     if filename:
         try:
@@ -137,6 +128,13 @@ def save_file():
 
 
 def saveas_file():
+    # define options for saving a file
+    saveas_file_opt = {}
+    saveas_file_opt['defaultextension'] = '.dlt'
+    saveas_file_opt['filetypes'] = [('delta printer', '.dlt'), ('all files', '.*')]
+    saveas_file_opt['initialdir'] = './'
+    saveas_file_opt['initialfile'] = ''
+    saveas_file_opt['title'] = 'Save as...'
     filename = asksaveasfilename(**saveas_file_opt)
     if filename:
         dfile.fsave(filename)
