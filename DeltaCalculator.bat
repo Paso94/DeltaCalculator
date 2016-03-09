@@ -1,1 +1,1 @@
-python ./DeltaCalculator.py
+python ./DeltaCalculator.py -h
