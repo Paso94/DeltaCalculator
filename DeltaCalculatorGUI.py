@@ -183,7 +183,7 @@ menu.add_cascade(label=strings.preferences_menu, menu=menu_preferences)
 
 def info_dialog():
     top = Toplevel(root)
-    top.geometry("230x442")
+    top.geometry("230x529")
     dr_photo = PhotoImage(file='DeltaCalculatorGUI/res/dr.gif')
     Label(top, image=dr_photo).pack()
     sro_photo = PhotoImage(file='DeltaCalculatorGUI/res/sro.gif')
@@ -194,6 +194,8 @@ def info_dialog():
     Label(top, image=ph_photo).pack()
     zh_photo = PhotoImage(file='DeltaCalculatorGUI/res/zh.gif')
     Label(top, image=zh_photo).pack()
+    aja_photo = PhotoImage(file='DeltaCalculatorGUI/res/aja.gif')
+    Label(top, image=aja_photo).pack()
     root.wait_window(top)
 
 
