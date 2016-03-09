@@ -206,6 +206,11 @@ class Delta:
     def maxa(self):
         return round(acos((self._sro - self._eo - self._co - self._pgr) / self._dr), self.precision_angle)
 
+    # Joint angle
+    @property
+    def aja(self):
+        return round(atan(self._pgr / (self._sro - self._eo - self._co)), self.precision_angle)
+
     # Heights
 
     # Printer height min

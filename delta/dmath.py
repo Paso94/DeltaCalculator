@@ -28,6 +28,14 @@ def asin(value):
         return -1
 
 
+def atan(value):
+    try:
+        return math.degrees(math.atan(value))
+    except ValueError:
+        print(value)
+        return -1
+
+
 def to_numb(arg, type='float', min=0.0, max=float('inf')):
     """
         :param arg: object

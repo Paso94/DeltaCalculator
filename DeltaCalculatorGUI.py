@@ -289,11 +289,12 @@ Label(output_frame, text=strings.a_title, bg=colors.bg).grid(row=3, **dimensions
 mina_var = output_row(output_frame, 4, strings.mina_name, strings.mina_symbol, delta.printer.mina)
 ha_var = output_row(output_frame, 5, strings.ha_name, strings.ha_symbol, delta.printer.ha)
 maxa_var = output_row(output_frame, 6, strings.maxa_name, strings.maxa_symbol, delta.printer.maxa)
+aja_var = output_row(output_frame, 7, strings.aja_name, strings.aja_symbol, delta.printer.aja)
 # Heights
-Label(output_frame, text=strings.h_title, bg=colors.bg).grid(row=7, **dimensions.input_title_grid)
-phd_var = output_row(output_frame, 8, strings.ph_name, strings.ph_symbol, delta.printer.phd)
+Label(output_frame, text=strings.h_title, bg=colors.bg).grid(row=8, **dimensions.input_title_grid)
+phd_var = output_row(output_frame, 9, strings.ph_name, strings.ph_symbol, delta.printer.phd)
 ph_var, ph_entry, ph_info = output_entry_row(output_frame, 8, delta.printer.ph, str(delta.printer.ph_min) + " < ph")
-zh_var = output_row(output_frame, 9, strings.zh_name, strings.zh_symbol, delta.printer.zh)
+zh_var = output_row(output_frame, 10, strings.zh_name, strings.zh_symbol, delta.printer.zh)
 
 ###########################################################################################
 # Image
