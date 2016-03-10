@@ -27,7 +27,7 @@ if __preferences__['language'] == "IT":
 # GUI
 ###########################################################################################
 root = Tk()
-root.geometry("1140x640")
+root.geometry("1080x640")
 root.title(strings.title)
 root['padx'] = 5
 root['pady'] = 5
@@ -306,6 +306,5 @@ photo = PhotoImage(file='DeltaCalculatorGUI/res/delta.gif')
 Label(root, image=photo, bg=colors.bg).grid(**dimensions.image_grid)
 
 ###########################################################################################
-
 # tk_window.resizable(3000, 2000)
 root.mainloop()
