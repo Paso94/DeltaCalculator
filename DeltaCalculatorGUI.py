@@ -37,7 +37,7 @@ root['background'] = colors.bg
 def get(var):
     try:
         return var.get()
-    except ValueError:
+    except :
         return 0
 
 
